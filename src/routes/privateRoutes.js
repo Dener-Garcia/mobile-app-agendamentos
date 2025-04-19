@@ -11,14 +11,15 @@ export default function PrivateRoutes() {
             <Stack.Screen name="main" component={Main}
                 options={
                     { headerShown: false }
+                    
                 } />
             <Stack.Screen name="services" component={Service}
                 options={
-                    { headerShown: false }
+                    { headerShown: true }
                 } />
             <Stack.Screen name="schedule" component={Schedule}
                 options={
-                    { headerShown: false }
+                    { headerShown: true }
                 } />
         </Stack.Navigator>
     )

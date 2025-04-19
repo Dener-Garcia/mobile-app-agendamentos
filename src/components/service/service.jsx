@@ -2,7 +2,7 @@ import { Text, View } from 'react-native'
 import { styles } from './service.style'
 import Button from '../button/button'
 
-export default function Service({ price, speciality }) {
+export default function Service({ price, speciality, onPressi, idService, idDoctor, doctorName }) {
     return (
         <View style={styles.container}>
             <View style={styles.content}>
@@ -14,7 +14,7 @@ export default function Service({ price, speciality }) {
                 </Text>
             </View>
             <View style={styles.btnPrimarys}>
-                <Button style={styles.btnPrimarys} label={'Agenda ai'} />
+                <Button style={styles.btnPrimarys} label={'Agenda ai'} onPressi={() => onPressi(idService, idDoctor, doctorName)} />
             </View>
         </View>
     )

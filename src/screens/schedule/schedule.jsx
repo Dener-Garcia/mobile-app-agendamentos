@@ -10,18 +10,27 @@ import Button from "../../components/button/button";
 LocaleConfig.locales['pt'] = ptBr
 LocaleConfig.defaultLocale = 'pt';
 
-export default function Schedule() {
+export default function Schedule(props) {
+
+    const idDoctor = props.route.params.idDoctor
+    const idService = props.route.params.id_service
+    const doctorName = props.route.params.doctorName
 
     const [selectedt, setSelectedt] = useState(today)
     const [selectedHour, setSelectedHour] = useState();
 
     const today = new Date().toDateString().slice(0, 10)
 
-    console.log(today, selectedt, selectedHour)
+    function clickBooking(){
+        console.log("clickBooking pg calendario", idService, idDoctor, doctorName, selectedt, selectedHour)
+   
+        
+    }
 
 
     return (
         <View style={styles.container}>
+            <Text>service{idDoctor}</Text>
             <Calendar style={styles.theme}
 
            //     current={selectedt}
@@ -55,7 +64,7 @@ export default function Schedule() {
                 </View>
             </View>
 
-            <Button label={"Confirmar"} />
+            <Button label={"Confirmar"} onPressi={clickBooking}/>
         </View>
     )
 }
