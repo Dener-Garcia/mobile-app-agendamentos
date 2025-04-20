@@ -21,10 +21,10 @@ export default function Schedule(props) {
 
     const today = new Date().toDateString().slice(0, 10)
 
-    function clickBooking(){
+    function clickBooking() {
         console.log("clickBooking pg calendario", idService, idDoctor, doctorName, selectedt, selectedHour)
-   
-        
+
+
     }
 
 
@@ -33,7 +33,7 @@ export default function Schedule(props) {
             <Text>service{idDoctor}</Text>
             <Calendar style={styles.theme}
 
-           //     current={selectedt}
+                //     current={selectedt}
 
                 onDayPress={(day) => {
                     setSelectedt(day.dateString)
@@ -63,8 +63,7 @@ export default function Schedule(props) {
                     </Picker>
                 </View>
             </View>
-
-            <Button label={"Confirmar"} onPressi={clickBooking}/>
+            <Button label={"Confirmar"} onPressi={clickBooking} />
         </View>
     )
 }

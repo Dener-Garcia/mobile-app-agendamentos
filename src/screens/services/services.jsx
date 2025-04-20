@@ -24,7 +24,7 @@ export default function Services(props) {
 
     return (
         <SafeAreaView>
-            <View style={styles.container}>
+    <View style={styles.container}>
 
                 <View style={styles.banner}>
 
