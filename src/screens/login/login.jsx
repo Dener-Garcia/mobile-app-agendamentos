@@ -1,13 +1,15 @@
-import { Alert, Text, TextInput, Touchable, TouchableHighlight, TouchableOpacity, View } from "react-native";
-import Logo from "../../../assets/logo";
+import { useContex, useState } from "react";
+import { Alert, Text, TextInput, TouchableOpacity, View } from "react-native";
 import { styles } from './login.style'
-import Button from "../../components/button/button";
-import { useState } from "react";
 import { urlLogin } from "../../constants/api";
-import { useLinkProps } from "@react-navigation/native";
+import Logo from "../../../assets/logo";
+import Button from "../../components/button/button";
+import { AuthContext } from "../../context/auth";
 
 
 export default function Login(props) {
+
+    const {setUser} = useContext(AuthContext)
 
     const [userEmail, setuserEmail] = useState("")
     const [userPassword, setUserPassword] = useState("")
@@ -28,15 +30,14 @@ export default function Login(props) {
 
             const data = await response.json()
 
-            console.log("###########", response.ok)
+            console.log("###########", response.ok, data)
 
             if (!response.ok) {
                 console.log("Mensagem:", data.Message)
                 throw new Error(data.Message)
             }
-
-            console.log("deu certo", data)
-
+            
+            setUser(data)
         } catch (error) {
             Alert.alert('Erro de login',
                 error.message,
