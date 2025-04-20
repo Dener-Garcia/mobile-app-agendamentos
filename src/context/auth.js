@@ -1,25 +1,25 @@
 import { createContext, useState } from "react";
 
 // instancia um contexto a uma variavel
-const authContext = createContext({})
+const AuthContext = createContext({})
 
 // cria uma function de contexto global
-function authProvider(props){
+function AuthProvider(props){
 
     // criando um useState de uso global
     const [user, setUser] = useState({})
 
 // o que a function vai retornar pelo .Provider é o objeto dentro de value
-    return <authContext.Provider value={
+    return <AuthContext.Provider value={
         {
             user,
             setUser
         }
     }>
-    </authContext.Provider>
+    </AuthContext.Provider>
 }
 
 export {
-    authContext,
-    authProvider
+    AuthContext,
+    AuthProvider
 }
