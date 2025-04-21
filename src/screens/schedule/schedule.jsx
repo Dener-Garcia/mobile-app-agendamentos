@@ -3,9 +3,11 @@ import { View, Text } from "react-native";
 import { styles } from "./scheduleStyle";
 import { Calendar, LocaleConfig } from "react-native-calendars";
 import { ptBr } from "../../constants/calendarConfig";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Picker } from "@react-native-picker/picker";
 import Button from "../../components/button/button";
+import { urlUserAppointment } from "../../constants/api";
+import { AuthContext } from "../../context/auth";
 
 LocaleConfig.locales['pt'] = ptBr
 LocaleConfig.defaultLocale = 'pt';
@@ -16,14 +18,54 @@ export default function Schedule(props) {
     const idService = props.route.params.id_service
     const doctorName = props.route.params.doctorName
 
+    const { user } = useContext(AuthContext)
     const [selectedt, setSelectedt] = useState(today)
     const [selectedHour, setSelectedHour] = useState();
 
     const today = new Date().toDateString().slice(0, 10)
 
-    function clickBooking() {
+    async function clickBooking() {
+        console.log(user.token)
         console.log("clickBooking pg calendario", idService, idDoctor, doctorName, selectedt, selectedHour)
+        try {
+            const response = await fetch(urlUserAppointment, {
+                method: "POST",
+                headers: {
+                    "content-type": "application/json",
+                    "authorization": `Bearer ${user.token}`
+                },
+                body: JSON.stringify({
+                    id_service: idService,
+                    booking_date: selectedt,
+                    booking_hour: selectedHour,
+                    id_doctor: idDoctor,
+                })
+            })
 
+            const data = response.json()
+
+            if (!response.ok) {
+                throw new Error(data.error)
+            }
+
+
+            console.log("depois de anos consegui fazer isso com jtw")
+
+        } catch (err) {
+            console.log(err)
+            Alert.alert('Erro',
+                err.message,
+                [
+                    {
+                        text: 'Entendido',
+                        style: 'cancel',
+                    },
+                ],
+                {
+                    cancelable: true,
+                }
+            )
+        }
 
     }
 
