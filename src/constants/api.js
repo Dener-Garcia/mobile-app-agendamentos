@@ -24,5 +24,5 @@ export {
     urlGetDoctors,
     urlDoctorServices,
     urlUserAppointment,
-    
+
 }

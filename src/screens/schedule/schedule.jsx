@@ -1,13 +1,13 @@
-import { View, Text } from "react-native";
-
-import { styles } from "./scheduleStyle";
-import { Calendar, LocaleConfig } from "react-native-calendars";
-import { ptBr } from "../../constants/calendarConfig";
 import { useContext, useState } from "react";
-import { Picker } from "@react-native-picker/picker";
-import Button from "../../components/button/button";
+import { View, Text, ToastAndroid } from "react-native";
+import { styles } from "./scheduleStyle";
 import { urlUserAppointment } from "../../constants/api";
 import { AuthContext } from "../../context/auth";
+
+import { Picker } from "@react-native-picker/picker";
+import { Calendar, LocaleConfig } from "react-native-calendars";
+import { ptBr } from "../../constants/calendarConfig";
+import Button from "../../components/button/button";
 
 LocaleConfig.locales['pt'] = ptBr
 LocaleConfig.defaultLocale = 'pt';
@@ -25,8 +25,7 @@ export default function Schedule(props) {
     const today = new Date().toDateString().slice(0, 10)
 
     async function clickBooking() {
-        console.log(user.token)
-        console.log("clickBooking pg calendario", idService, idDoctor, doctorName, selectedt, selectedHour)
+        console.log("clickBooking pg calendario", idService, idDoctor, doctorName, selectedt, selectedHour, user.token)
         try {
             const response = await fetch(urlUserAppointment, {
                 method: "POST",
@@ -43,13 +42,11 @@ export default function Schedule(props) {
             })
 
             const data = response.json()
-
+            console.log("dentro marcacao," ,data)
             if (!response.ok) {
                 throw new Error(data.error)
             }
-
-
-            console.log("depois de anos consegui fazer isso com jtw")
+            ToastAndroid.show("Consulta agendada com " + doctorName, ToastAndroid.LONG)
 
         } catch (err) {
             console.log(err)

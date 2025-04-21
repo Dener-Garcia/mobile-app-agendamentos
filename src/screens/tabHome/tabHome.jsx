@@ -60,7 +60,7 @@ export default function TabHome(props) {
 
     useEffect(() => {
         loadDoctors()
-    }, [323])
+    }, [])
 
     return (
         <SafeAreaView>

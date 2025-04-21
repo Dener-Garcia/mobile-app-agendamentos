@@ -25,34 +25,34 @@ export const doctors_services = [
 ];
 
 export const appointments = [
-  { id_appointment: 1, service: "Consulta de Cardiologia", name: "Dr. Obi-Wan Kenobi", specialty: "Cardiologia", booking_date: "2024-10-25", booking_hour: "08:30" },
-  { id_appointment: 2, service: "Consulta de Cardiologia", name: "Dr. Obi-Wan Kenobi", specialty: "Cardiologia", booking_date: "2024-10-26", booking_hour: "10:00" },
+  { id_appointment: 1, description: "Consulta de Cardiologia", doctor: "Dr. Obi-Wan Kenobi", specialty: "Cardiologia", booking_date: "2024-10-25", booking_hour: "08:30" },
+  { id_appointment: 2, description: "Consulta de Cardiologia", doctor: "Dr. Obi-Wan Kenobi", specialty: "Cardiologia", booking_date: "2024-10-26", booking_hour: "10:00" },
 
-  { id_appointment: 3, service: "Cirurgia Torácica", name: "Dr. Darth Vader", specialty: "Cirurgia Torácica", booking_date: "2024-10-27", booking_hour: "14:00" },
-  { id_appointment: 4, service: "Cirurgia Torácica", name: "Dr. Darth Vader", specialty: "Cirurgia Torácica", booking_date: "2024-10-28", booking_hour: "09:30" },
+  { id_appointment: 3, description: "Cirurgia Torácica", doctor: "Dr. Darth Vader", specialty: "Cirurgia Torácica", booking_date: "2024-10-27", booking_hour: "14:00" },
+  { id_appointment: 4, description: "Cirurgia Torácica", doctor: "Dr. Darth Vader", specialty: "Cirurgia Torácica", booking_date: "2024-10-28", booking_hour: "09:30" },
 
-  { id_appointment: 5, service: "Avaliação Neurológica", name: "Dr. Yoda", specialty: "Neurologia", booking_date: "2024-10-29", booking_hour: "11:00" },
-  { id_appointment: 6, service: "Avaliação Neurológica", name: "Dr. Yoda", specialty: "Neurologia", booking_date: "2024-10-30", booking_hour: "13:00" },
+  { id_appointment: 5, description: "Avaliação Neurológica", doctor: "Dr. Yoda", specialty: "Neurologia", booking_date: "2024-10-29", booking_hour: "11:00" },
+  { id_appointment: 6, description: "Avaliação Neurológica", doctor: "Dr. Yoda", specialty: "Neurologia", booking_date: "2024-10-30", booking_hour: "13:00" },
 
-  { id_appointment: 7, service: "Consulta Ortopédica", name: "Dr. Luke Skywalker", specialty: "Ortopedia", booking_date: "2024-10-31", booking_hour: "15:30" },
-  { id_appointment: 8, service: "Consulta Ortopédica", name: "Dr. Luke Skywalker", specialty: "Ortopedia", booking_date: "2024-11-01", booking_hour: "09:00" },
+  { id_appointment: 7, description: "Consulta Ortopédica", doctor: "Dr. Luke Skywalker", specialty: "Ortopedia", booking_date: "2024-10-31", booking_hour: "15:30" },
+  { id_appointment: 8, description: "Consulta Ortopédica", doctor: "Dr. Luke Skywalker", specialty: "Ortopedia", booking_date: "2024-11-01", booking_hour: "09:00" },
 
-  { id_appointment: 9, service: "Consulta Pediátrica", name: "Dr. Anakin Skywalker", specialty: "Pediatria", booking_date: "2024-11-02", booking_hour: "10:30" },
-  { id_appointment: 10, service: "Consulta Pediátrica", name: "Dr. Anakin Skywalker", specialty: "Pediatria", booking_date: "2024-11-03", booking_hour: "14:00" },
+  { id_appointment: 9, description: "Consulta Pediátrica", doctor: "Dr. Anakin Skywalker", specialty: "Pediatria", booking_date: "2024-11-02", booking_hour: "10:30" },
+  { id_appointment: 10, description: "Consulta Pediátrica", doctor: "Dr. Anakin Skywalker", specialty: "Pediatria", booking_date: "2024-11-03", booking_hour: "14:00" },
 
-  { id_appointment: 11, service: "Consulta Dermatológica", name: "Dr. Qui-Gon Jinn", specialty: "Dermatologia", booking_date: "2024-11-04", booking_hour: "16:00" },
-  { id_appointment: 12, service: "Consulta Dermatológica", name: "Dr. Qui-Gon Jinn", specialty: "Dermatologia", booking_date: "2024-11-05", booking_hour: "08:30" },
+  { id_appointment: 11, description: "Consulta Dermatológica", doctor: "Dr. Qui-Gon Jinn", specialty: "Dermatologia", booking_date: "2024-11-04", booking_hour: "16:00" },
+  { id_appointment: 12, description: "Consulta Dermatológica", doctor: "Dr. Qui-Gon Jinn", specialty: "Dermatologia", booking_date: "2024-11-05", booking_hour: "08:30" },
 
-  { id_appointment: 13, service: "Exame Oftalmológico", name: "Dr. Mace Windu", specialty: "Oftalmologia", booking_date: "2024-11-06", booking_hour: "09:30" },
-  { id_appointment: 14, service: "Exame Oftalmológico", name: "Dr. Mace Windu", specialty: "Oftalmologia", booking_date: "2024-11-07", booking_hour: "11:00" },
+  { id_appointment: 13, description: "Exame Oftalmológico", name: "Dr. Mace Windu", specialty: "Oftalmologia", booking_date: "2024-11-06", booking_hour: "09:30" },
+  { id_appointment: 14, description: "Exame Oftalmológico", name: "Dr. Mace Windu", specialty: "Oftalmologia", booking_date: "2024-11-07", booking_hour: "11:00" },
 
-  { id_appointment: 15, service: "Consulta Psiquiátrica", name: "Dr. Palpatine", specialty: "Psiquiatria", booking_date: "2024-11-08", booking_hour: "13:30" },
-  { id_appointment: 16, service: "Consulta Psiquiátrica", name: "Dr. Palpatine", specialty: "Psiquiatria", booking_date: "2024-11-09", booking_hour: "15:00" },
+  { id_appointment: 15, description: "Consulta Psiquiátrica", doctor: "Dr. Palpatine", specialty: "Psiquiatria", booking_date: "2024-11-08", booking_hour: "13:30" },
+  { id_appointment: 16, description: "Consulta Psiquiátrica", doctor: "Dr. Palpatine", specialty: "Psiquiatria", booking_date: "2024-11-09", booking_hour: "15:00" },
 
-  { id_appointment: 17, service: "Consulta Cirurgia Plástica", name: "Dr. Boba Fett", specialty: "Cirurgia Plástica", booking_date: "2024-11-10", booking_hour: "10:00" },
-  { id_appointment: 18, service: "Consulta Cirurgia Plástica", name: "Dr. Boba Fett", specialty: "Cirurgia Plástica", booking_date: "2024-11-11", booking_hour: "12:30" },
+  { id_appointment: 17, description: "Consulta Cirurgia Plástica", doctor: "Dr. Boba Fett", specialty: "Cirurgia Plástica", booking_date: "2024-11-10", booking_hour: "10:00" },
+  { id_appointment: 18, description: "Consulta Cirurgia Plástica", doctor: "Dr. Boba Fett", specialty: "Cirurgia Plástica", booking_date: "2024-11-11", booking_hour: "12:30" },
 
-  { id_appointment: 19, service: "Consulta Endocrinológica", name: "Dr. Kylo Ren", specialty: "Endocrinologia", booking_date: "2024-11-12", booking_hour: "14:30" },
-  { id_appointment: 20, service: "Consulta Endocrinológica", name: "Dr. Kylo Ren", specialty: "Endocrinologia", booking_date: "2024-11-13", booking_hour: "16:00" }
+  { id_appointment: 19, description: "Consulta Endocrinológica", doctor: "Dr. Kylo Ren", specialty: "Endocrinologia", booking_date: "2024-11-12", booking_hour: "14:30" },
+  { id_appointment: 20, description: "Consulta Endocrinológica", doctor: "Dr. Kylo Ren", specialty: "Endocrinologia", booking_date: "2024-11-13", booking_hour: "16:00" }
 ];
 
