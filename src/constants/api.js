@@ -1,6 +1,8 @@
 
 const urlLogin = "http://144.22.160.3:3003/users/login"
 const urlCreateAccount = "http://144.22.160.3:3003/users/register"
+const urlGetDoctors = "http://144.22.160.3:3003/doctors"
+const urlDoctorServices = "http://144.22.160.3:3003/doctors/"
 
 const api = async (route) => {
     try {
@@ -14,6 +16,10 @@ const api = async (route) => {
 
 }
 
-export { api, 
+export {
+    api,
     urlLogin,
-    urlCreateAccount }
+    urlCreateAccount,
+    urlGetDoctors,
+    urlDoctorServices
+}

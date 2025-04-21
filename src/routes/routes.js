@@ -7,8 +7,6 @@ export default function Routes() {
 
     const {user} = useContext(AuthContext)
 
-    console.log("meu user", user)
-
     return (
         user.id ? <PrivateRoutes /> : <OpenRoutes />
     )

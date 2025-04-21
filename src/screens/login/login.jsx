@@ -1,4 +1,4 @@
-import { useContex, useState } from "react";
+import { useContext, useState } from "react";
 import { Alert, Text, TextInput, TouchableOpacity, View } from "react-native";
 import { styles } from './login.style'
 import { urlLogin } from "../../constants/api";
@@ -9,13 +9,12 @@ import { AuthContext } from "../../context/auth";
 
 export default function Login(props) {
 
-    const {setUser} = useContext(AuthContext)
+    const { user, setUser } = useContext(AuthContext)
 
     const [userEmail, setuserEmail] = useState("")
     const [userPassword, setUserPassword] = useState("")
 
     async function login() {
-        console.log("chamei funcao")
         try {
             const response = await fetch(urlLogin, {
                 method: "POST",
@@ -30,14 +29,13 @@ export default function Login(props) {
 
             const data = await response.json()
 
-            console.log("###########", response.ok, data)
-
             if (!response.ok) {
                 console.log("Mensagem:", data.Message)
                 throw new Error(data.Message)
             }
-            
+
             setUser(data)
+
         } catch (error) {
             Alert.alert('Erro de login',
                 error.message,
@@ -71,7 +69,7 @@ export default function Login(props) {
 
             <View style={styles.footer}>
                 <Text>Não tenho conta.</Text>
-                <TouchableOpacity onPress={()=> props.navigation.navigate("account")}>
+                <TouchableOpacity onPress={() => props.navigation.navigate("account")}>
                     <Text style={styles.btnTertiary}> Quero criar minha conta</Text>
                 </TouchableOpacity>
             </View>
