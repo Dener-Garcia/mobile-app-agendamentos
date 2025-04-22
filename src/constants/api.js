@@ -4,6 +4,7 @@ const urlCreateAccount = "http://144.22.160.3:3003/users/register"
 const urlGetDoctors = "http://144.22.160.3:3003/doctors"
 const urlDoctorServices = "http://144.22.160.3:3003/doctors/"
 const urlUserAppointment = "http://144.22.160.3:3003/appointments/"
+const urlUserProfile = "http://144.22.160.3:3003/users/profile"
 
 const api = async (route) => {
     try {
@@ -24,5 +25,6 @@ export {
     urlGetDoctors,
     urlDoctorServices,
     urlUserAppointment,
-
+    urlUserProfile,
+    
 }
