@@ -78,7 +78,6 @@ export default function Account(props) {
                 
                 <Logo width={'40'} height={'40'} />
                 
-                <Text>{userName}, {userEmail} ,{userPassword}</Text>
             </View>
 
             <View style={styles.inputContainer}>

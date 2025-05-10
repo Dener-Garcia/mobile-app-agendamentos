@@ -7,7 +7,7 @@ const AppointmentIcon = ({ size, focused }) => (
         width={size}
         height={size}
         viewBox="0 0 24 24"
-        fill={focused ? COLORS.blue : 'none'}
+        fill={focused ? COLORS.accent : 'none'}
         stroke="#7c7c7c"
         strokeWidth={2}
         strokeLinecap="round"

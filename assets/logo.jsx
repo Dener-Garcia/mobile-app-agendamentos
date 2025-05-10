@@ -2,7 +2,7 @@ import React from 'react';
 import { Text, View } from 'react-native';
 import Svg, { Path } from 'react-native-svg';
 
-const Logo = ({ width = 24, height = 24, color = '#00f' }) => {
+const Logo = ({ width = 24, height = 24, color = '#6ec845' }) => {
   return (
     <View style={{flexDirection: 'row', alignItems: 'center', gap: '1rem'}}>
       <Svg xmlns="http://www.w3.org/2000/svg" width={width} height={height} viewBox="0 0 24 24" fill="none">

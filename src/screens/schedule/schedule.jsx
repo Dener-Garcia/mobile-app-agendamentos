@@ -69,7 +69,7 @@ export default function Schedule(props) {
 
     return (
         <View style={styles.container}>
-            <Text>service{idDoctor}</Text>
+            <Text>Selecione a data e hora do seu agendamento.</Text>
             <Calendar style={styles.theme}
 
                 //     current={selectedt}

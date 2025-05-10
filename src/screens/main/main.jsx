@@ -4,13 +4,11 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
 import LogoMain from "../../../assets/logoMain"
 import HouseIcon from "../../../assets/house";
-
-
+import AppointmentIcon from "./Appointment";
+import UserIcon from "../../../assets/user";
 import TabHome from "../tabHome/tabHome";
 import TabCallendar from "../tabCallendar/tabCallendar";
 import TabProfile from "../tabProfile/tabProfile";
-import UserIcon from "../../../assets/user";
-import AppointmentIcon from "./Appointment";
 
 
 const Tab = createBottomTabNavigator()

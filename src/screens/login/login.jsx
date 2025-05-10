@@ -57,7 +57,6 @@ export default function Login(props) {
         <View style={styles.container}>
             <View style={styles.containerLogo}>
                 <Logo width={'40'} height={'40'} />
-                <Text>{userEmail}, {userPassword}</Text>
             </View>
 
             <View style={styles.inputContainer}>

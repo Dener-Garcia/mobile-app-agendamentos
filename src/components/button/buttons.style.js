@@ -8,15 +8,15 @@ export const styles = {
     },
 
     typePrimary: {
-        backgroundColor: COLORS.blue,
+        backgroundColor: COLORS.accent,
     },
 
     typeDanger: {
-        backgroundColor: COLORS.red,
+        backgroundColor: COLORS.danger,
     },
 
     text: {
-        color: COLORS.white,
+        color: COLORS.text,
         fontSize: FONTS.fontSizeBtn,
         textAlign: "center"
     }

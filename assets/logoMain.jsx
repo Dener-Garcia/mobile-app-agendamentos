@@ -7,7 +7,7 @@ const LogoMain = (props) => (
     height={24}
     viewBox="0 0 24 24"
     fill="none"
-    stroke="#ff00ff"
+    stroke="#6ec845"
     strokeWidth={2}
     strokeLinecap="round"
     strokeLinejoin="round"

@@ -8,7 +8,7 @@ const FemaleDoctor = ({width, height, color}) => (
     width={width} height={height}
   >
     <G
-      stroke="#e000ce"
+      stroke="#c76e9b"
       strokeLinecap="round"
       strokeLinejoin="round"
       strokeOpacity={0.9}

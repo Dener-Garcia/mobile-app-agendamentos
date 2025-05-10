@@ -1,12 +1,10 @@
 const COLORS = {
-    blue: "#007ea7",
-    red: "#fe6d73",
-    gray100: "#124559",
-    gray200: "#588b8b",
-    gray300: "#489fb5",
-    gray400: "#f9f7f3",
-    white: "#fff",
-    secondary: "#fafafa"
+    accent: "#40d201",
+    danger: "#ff989b",
+    text: "#101208",
+    bgPrimary: "#edffe6",
+    bgSecondary: "#edffe6",
+    icons: "#6ec845"
 }
 
 const FONTS = {

@@ -6,7 +6,7 @@ export const styles = {
 
     container : {
         flex: 1,
-        backgroundColor: COLORS.white,
+        backgroundColor: COLORS.bgSecondary,
         paddingTop: 60,
         paddingBottom: 60,
         padding: 24,
@@ -23,7 +23,7 @@ export const styles = {
 
     input: {
         borderWidth: 2,
-        borderColor: COLORS.gray300,
+        borderColor: COLORS.accent,
         borderStyle: 'solid',
         borderRadius: 8,
         padding: 8,
@@ -31,13 +31,13 @@ export const styles = {
 
     btn : {
         widdth: "100%",
-        backgroundColor: COLORS.blue,
+        backgroundColor: COLORS.accent,
         padding: 16,
         borderRadius: 999
     },
 
     text : {
-        color: COLORS.white,
+        color: COLORS.text,
         fontSize: FONTS.fontSizeBtn,
         textAlign: "center"
     },
@@ -49,7 +49,7 @@ export const styles = {
     },
 
     btnTertiary: {
-        color: COLORS.blue,
+        color: COLORS.accent,
     }
 
 }

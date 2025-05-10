@@ -10,7 +10,7 @@ const MaleDoctor = ({width, height}) => (
     height={height}
   >
     <G
-      stroke="#0045e6"
+      stroke="#3d5aac"
       strokeLinecap="round"
       strokeLinejoin="round"
       strokeOpacity={0.9}

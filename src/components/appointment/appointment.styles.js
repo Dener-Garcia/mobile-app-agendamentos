@@ -8,19 +8,19 @@ export const styles = {
         padding: 8,
         borderStyle: 'solid',
         borderWidth: 2,
-        borderColor: COLORS.gray400,
+        borderColor: COLORS.accent,
         borderRadius: 8,
         justifyContent: 'space-between',
     },
 
     title: {
         fontSize: 20,
-        color: COLORS.gray100,
+        color: COLORS.text,
     },
 
     subTitle: {
         fontSize: 14,
-        color: COLORS.gray200,
+        color: COLORS.text,
     },
 
     containerAppointment: {
@@ -43,7 +43,7 @@ export const styles = {
     },
 
     text: {
-        color: COLORS.white,
+        color: COLORS.text,
         fontSize: FONTS.fontSizeBtn,
         textAlign: "center"
     },
