@@ -2,7 +2,7 @@ const COLORS = {
     accent: "#40d201",
     danger: "#ff989b",
     text: "#101208",
-    bgPrimary: "#edffe6",
+    bgPrimary: "#f7fff5",
     bgSecondary: "#edffe6",
     icons: "#6ec845"
 }
