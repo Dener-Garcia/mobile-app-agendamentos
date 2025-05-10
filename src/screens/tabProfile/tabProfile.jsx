@@ -3,10 +3,11 @@ import { styles } from "./tabProfileStyle";
 import {urlUserProfile} from "../../constants/api.js"
 import { useContext, useEffect, useState } from "react";
 import {AuthContext} from "../../context/auth.js"
+import Button from "../../components/button/button.jsx";
 
 export default function TabProfile() {
 
-    const {user} = useContext(AuthContext)
+    const {user, setUser} = useContext(AuthContext)
 
     const [profile, setProfile] = useState([])
     
@@ -46,6 +47,11 @@ export default function TabProfile() {
         }
     }
 
+    function handleLogout(){
+        console.log("logout")
+        setUser({})
+    }
+
     useEffect(() => {
         getUserProfile()
     },[2])
@@ -60,6 +66,7 @@ export default function TabProfile() {
                 <Text style={styles.title}>Email</Text>
                 <Text style={styles.subTitle}>{profile.email}</Text>
             </View>
+            <Button label={"Sair"} onPressi={handleLogout}/>
         </View>
     )
 }
