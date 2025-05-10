@@ -60,6 +60,7 @@ export default function TabProfile() {
                 <Text style={styles.title}>Email</Text>
                 <Text style={styles.subTitle}>{profile.email}</Text>
             </View>
+            
         </View>
     )
 }
